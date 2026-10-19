@@ -15,6 +15,10 @@
     --warning: 245, 158, 11;
   }
   * { @apply antialiased; }
+  canvas {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
   body {
     background: radial-gradient(1200px 600px at 70% -10%, color-mix(in srgb, rgb(var(--surface)) 40%, rgb(var(--primary)) 10%) 0%, transparent 50%), #0f172a;
     color: rgb(var(--text));

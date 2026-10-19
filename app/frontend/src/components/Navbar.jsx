@@ -21,11 +21,11 @@ export default function Navbar() {
             <NavLink
               key={l.to}
               to={l.to}
-              className={({ active }) =>
+              className={({ isActive }) =>
                 `px-3 py-1.5 rounded-md text-sm font-medium transition-all ` +
-                (active
+                (isActive
                   ? "bg-cyan-500/15 text-cyan-300 border border-cyan-500/40"
-                  : "text-slate-300 hover:text-cyan-300 hover:bg-surface-2/30")
+                  : "text-slate-300 hover:text-cyan-300 hover:bg-slate-800/40")
               }
             >
               {l.label}
