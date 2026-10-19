@@ -6,8 +6,6 @@ import {
   LinearScale,
   PointElement,
   LineElement,
-  Line,
-  Bar,
   Tooltip,
   Legend,
   Title,
@@ -16,7 +14,7 @@ import { Bar as BarChart, Line as LineChart } from "react-chartjs-2";
 import { analysisData } from "../data/analysisData";
 import ChartCard from "../components/ChartCard";
 
-ChartJS.register(BarElement, CategoryScale, LinearScale, PointElement, LineElement, Line, Bar, Tooltip, Legend, Title);
+ChartJS.register(BarElement, CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Title);
 
 export default function Clustering() {
   const t = analysisData.tracks.clustering;

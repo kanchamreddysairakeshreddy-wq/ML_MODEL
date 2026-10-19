@@ -1,30 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "services": {
-    "app": {
-      "root": "app",
-      "runtime": "python",
-      "entrypoint": "main.py"
-    },
-    "frontend": {
-      "root": "app/frontend",
-      "framework": "vite",
-      "bindings": [
-        {
-          "type": "service",
-          "service": "app",
-          "format": "url",
-          "env": "BACKEND_URL"
-        }
-      ]
-    }
-  },
+  "buildCommand": "cd app/frontend && npm install && npm run build",
+  "outputDirectory": "app/frontend/dist",
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": {
-        "service": "frontend"
-      }
+      "destination": "/index.html"
     }
   ]
 }
