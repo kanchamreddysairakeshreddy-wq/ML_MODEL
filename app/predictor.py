@@ -1,4 +1,4 @@
-"""Prediction logic for the Smart Manufacturing web app (no Streamlit code here, so it is easy to test)."""
+"""Prediction logic for the Smart Manufacturing FastAPI service."""
 import json
 from pathlib import Path
 

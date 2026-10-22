@@ -3,7 +3,11 @@
 End-to-end ML pipeline on a smart-manufacturing sensor dataset, covering three tracks:
 **Regression**, **Classification** and **Clustering** (B.Tech CSE, III year, AY 2026-27).
 
-**Team:** 
+**Team members:**
+
+1. Sai Rakesh Reddy — Roll No. `CB.SC.U4CSE24517`
+2. Akhil Reddy — Roll No. `CB.SC.U4CSE24518`
+3. Varanasi Rohit — Roll No. `CB.SC.U4CSE24561`
 
 ## Problem statement
 
@@ -38,7 +42,6 @@ results/               CSV result tables (written by the notebooks)
 app/                   GUI / deployment code (Vercel web app)
   main.py              FastAPI backend
   predictor.py         Prediction logic
-  app.py               Streamlit app (bonus)
   frontend/            React + Vite frontend
 ```
 
@@ -64,18 +67,20 @@ Evaluation: R2/RMSE/MAE + 5-fold CV (regression); Accuracy/Precision/Recall/weig
 
 A React + Vite frontend (`app/frontend/`) with a FastAPI backend (`app/main.py`) lets a user enter machine readings and see the **predicted maintenance risk** (with class probabilities) and the **predicted energy consumption (kWh)**. It loads the models exported by the notebook; nothing is retrained.
 
-A Streamlit app (`app/app.py`) is also included as an alternative GUI.
-
-**Live app:** _<paste your public URL here after deploying>_
+**Live app:** https://casestudymachinelearning.vercel.app/
 
 ### Run the app locally
 
 ```bash
 pip install -r requirements.txt
-# FastAPI backend
-cd app && uvicorn main:app --reload
-# Streamlit alternative
-streamlit run app/app.py
+# FastAPI backend (terminal 1)
+cd app
+uvicorn main:app --reload
+
+# React frontend (terminal 2, from the repository root)
+cd app/frontend
+npm install
+npm run dev
 ```
 
 ## Environment setup & how to run
@@ -93,9 +98,9 @@ jupyter notebook notebooks/
 
 All random operations use `random_state=42`. Scalers/encoders are fitted on the training split only.
 
-## Generative-AI assistance (declaration)
+## AI assistance declaration
 
-Generative AI (Claude, Anthropic) was used for **code scaffolding** of the Review 2 sections (Classification Part B, final-model-selection helpers, the clustering pipeline and the web app). Analysis, interpretation and feature-engineering decisions are the team's own. 
+Generative AI assistance was used for limited code scaffolding and editing support in the Review 2 sections, including Classification Part B, final-model-selection helpers, the clustering pipeline and web-app integration. The team independently selected the features, validated the results, interpreted the metrics, and made the domain conclusions. All team members are responsible for understanding and explaining the submitted code and analysis.
 
 ## References
 

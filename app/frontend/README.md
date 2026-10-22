@@ -2,6 +2,8 @@
 
 Interactive React frontend for the 23CSE301 ML capstone project. Shows all analysis from `Review2_Final.ipynb`: regression, classification, and clustering results, with live Chart.js visualizations and a machine-reading predictor form.
 
+Live deployment: https://casestudymachinelearning.vercel.app/
+
 ## Quick Start (standalone — no install required)
 
 The standalone build lives in `frontend/public/` and works by simply opening it in a browser with network access (for CDN React):
@@ -63,6 +65,6 @@ frontend/
 
 ## Notes
 
-- The predict form uses heuristic estimates based on the notebook's feature correlations (motor_current to energy = 0.77). The Python `app.py` Streamlit app calls the actual Gradient Boosting models for production predictions.
+- The React predict form uses the embedded analysis data for its interactive estimates. The FastAPI service in `app/main.py` loads the serialized Gradient Boosting models for model-backed predictions.
 - All chart data is hardcoded from notebook cell outputs (no runtime data fetching needed).
 - The Vite `src/` version provides a production build pipeline once npm dependencies are installed.
