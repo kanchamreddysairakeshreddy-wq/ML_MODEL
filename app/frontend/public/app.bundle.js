@@ -1021,7 +1021,7 @@ function ResultCard({
     className: "mt-4 pt-4 border-t border-slate-700/30"
   }, /*#__PURE__*/React.createElement("p", {
     className: "text-xs text-slate-400"
-  }, "Note: Front-end estimates derived from notebook feature correlations and cluster centroids. The Streamlit Python app (", /*#__PURE__*/React.createElement("code", null, "app.py"), ") calls the serialized Gradient Boosting pickle bundles directly.")));
+  }, "Note: Front-end estimates are derived from the notebook analysis data and cluster centroids. Model-backed predictions are available through the FastAPI service in app/main.py.")));
 }
 
 // ---------- App + mount ----------

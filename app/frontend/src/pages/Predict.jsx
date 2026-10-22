@@ -263,8 +263,8 @@ function ResultCard({ result, values }) {
       </div>
       <div className="mt-4 pt-4 border-t border-slate-700/30">
         <p className="text-xs text-slate-400">
-          Note: Front-end estimates derived from notebook feature correlations and cluster centroids. The Streamlit app (<code>app.py</code>)
-          calls the actual Gradient Boosting models via Python.
+          Note: Front-end estimates are derived from the notebook analysis data and cluster centroids. Model-backed predictions
+          are available through the FastAPI service in <code>app/main.py</code>.
         </p>
       </div>
     </div>
